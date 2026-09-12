@@ -8,7 +8,7 @@ const Education = () => {
       degree: 'BS, Computer Engineering (In-Progress)',
       institution: 'Sir Syed University of Engineering & Technology',
       location: 'Karachi, Pakistan',
-      period: '2019 - 2024',
+      period: '2022 - 2026',
       icon: <FaGraduationCap />,
       details: [
         'Specialized in Computer Engineering with focus on IoT, Machine Learning, and Web Development',
@@ -21,7 +21,7 @@ const Education = () => {
       degree: 'Intermediate (Pre-Engineering)',
       institution: 'Sir Syed Majeed Government Degree College, Stadium Road',
       location: 'Karachi, Pakistan',
-      period: '2017 - 2019',
+      period: '2020 - 2022',
       icon: <FaUniversity />,
       details: [
         'Focused on Mathematics, Physics, and Chemistry',

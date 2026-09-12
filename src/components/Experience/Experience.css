@@ -1,6 +1,6 @@
 .experience {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #0f0f0f;
   position: relative;
   overflow: hidden;
 }
@@ -13,8 +13,8 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 153, 255, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -28,14 +28,17 @@
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #ffffff;
   margin-bottom: 10px;
   font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .experience-subtitle {
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: #b0b0b0;
   font-size: 1.1rem;
   margin-bottom: 50px;
 }
@@ -52,7 +55,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 212, 255, 0.3);
 }
 
 .experience-item {
@@ -74,29 +77,31 @@
 .experience-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  color: #667eea;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
   flex-shrink: 0;
 }
 
 .experience-content {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   padding: 25px;
   border-radius: 15px;
   flex: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .experience-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
 }
 
 .experience-header {
@@ -110,14 +115,14 @@
 
 .experience-title {
   font-size: 1.5rem;
-  color: #2d3748;
+  color: #ffffff;
   margin-bottom: 5px;
   font-weight: 700;
 }
 
 .experience-company {
   font-size: 1.1rem;
-  color: #667eea;
+  color: #00d4ff;
   font-weight: 600;
 }
 
@@ -130,22 +135,22 @@
 
 .experience-period {
   font-size: 0.95rem;
-  color: #4a5568;
+  color: #b0b0b0;
   font-weight: 600;
 }
 
 .experience-type {
   display: inline-block;
   padding: 4px 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #0a0a0a;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
 }
 
 .experience-location {
-  color: #718096;
+  color: #b0b0b0;
   font-size: 0.95rem;
   margin-bottom: 15px;
   font-style: italic;
@@ -160,7 +165,7 @@
 .experience-responsibilities li {
   padding-left: 25px;
   margin-bottom: 10px;
-  color: #4a5568;
+  color: #b0b0b0;
   line-height: 1.6;
   position: relative;
 }
@@ -169,7 +174,7 @@
   content: '▹';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #00d4ff;
   font-size: 1.2rem;
   font-weight: bold;
 }

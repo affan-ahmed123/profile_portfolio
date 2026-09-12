@@ -6,27 +6,27 @@ const Experience = () => {
   const experiences = [
     {
       title: 'MERN Stack Intern',
-      company: 'Caliber Innovation & Solutions',
+      company: 'Coderatory Revolution & Innovation',
       location: 'Karachi, Pakistan',
-      period: 'Summer 2023',
+      period: '3 months (2026)',
       type: 'Internship',
       icon: <FaBriefcase />,
       responsibilities: [
-        'Developed and maintained web applications using MongoDB, Express.js, React.js, and Node.js',
+        'Developed and maintained web applications using Type Script, Next JS , MongoDB, Express.js, React.js, and Node.js',
         'Collaborated with senior developers on client projects',
-        'Implemented responsive UI components and RESTful APIs',
+        'Implemented responsive UI components and RESTful APIs , GraphQL , Sockets, prisma',
         'Participated in code reviews and agile development practices'
       ]
     },
     {
-      title: 'Summer Project Development',
+      title: 'Semester Project Development',
       company: 'Academic Coursework',
       location: 'Sir Syed University',
-      period: 'Summer 2022',
+      period: 'Semester Projects',
       type: 'Academic Project',
       icon: <FaLaptopCode />,
       responsibilities: [
-        'Worked on several summer projects involving hardware design, IoT, and embedded systems',
+        'Worked on several semester projects involving hardware design, IoT, and embedded systems',
         'Developed projects using Python, Arduino, and microcontrollers',
         'Built hardware, software, and networking systems working with design and cutting-edge tools',
         'Collaborated with team to integrate hardware and software components'

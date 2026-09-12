@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Hero = () => {
   const [text, setText] = useState('');
-  const roles = ['Computer Engineer', 'Full Stack Developer', 'Web Developer', 'IoT Enthusiast'];
+  const roles = ['Computer Engineer', 'Full Stack Developer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -70,7 +70,7 @@ const Hero = () => {
             </button>
           </div>
           <div className="hero-social">
-            <a href="https://github.com/umai90" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/affan-ahmed123" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/affan-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -79,7 +79,7 @@ const Hero = () => {
             <a href="mailto:affanahmed08@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
-            <a href="tel:+923032781433" aria-label="Phone">
+            <a href="tel:03432172162" aria-label="Phone">
               <FaPhone />
             </a>
           </div>
@@ -87,7 +87,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="image-wrapper">
             <img 
-              src="/images/affan.jpg" 
+              src="/images/hello.png" 
               alt="Affan Ahmed - Computer Engineer" 
               className="profile-image"
               onError={(e) => {
@@ -101,9 +101,6 @@ const Hero = () => {
             <div className="image-glow"></div>
           </div>
         </div>
-      </div>
-      <div className="hero-scroll">
-        <div className="scroll-indicator"></div>
       </div>
     </section>
   );

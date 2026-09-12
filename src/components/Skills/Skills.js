@@ -7,22 +7,22 @@ const Skills = () => {
     {
       icon: <FaReact />,
       title: 'Frontend & Mobile Development',
-      skills: ['React.js', 'Flutter', 'Dart', 'JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'jQuery', 'Responsive Design']
+      skills: ['React.js', 'Flutter', 'Dart', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'jQuery', 'Responsive Design']
     },
     {
       icon: <FaNode />,
       title: 'Backend & Database',
-      skills: ['Node.js', 'Express.js', 'Python', 'Flask', 'Java', 'C++', 'PHP', 'MongoDB', 'PostgreSQL', 'MySQL', 'REST APIs', 'Firebase']
+      skills: ['Node.js', 'Express.js', 'Python', 'Flask', 'Java', 'C++', 'PHP', 'MongoDB', 'PostgreSQL', 'MySQL', 'REST APIs','GraphQL','Sockets','Prisma', 'Firebase']
     },
     {
       icon: <FaMicrochip />,
       title: 'IoT & Machine Learning',
-      skills: ['Raspberry Pi', 'Arduino', 'ESP32', 'Machine Learning', 'scikit-learn', 'CatBoost', 'NLP', 'Speech Recognition', 'Vosk', 'Whisper', 'Computer Vision', 'Embedded Systems', 'MATLAB', 'Simulink', 'Proteus']
+      skills: ['Raspberry Pi', 'Arduino', 'ESP32', 'Embedded Systems', 'MATLAB', 'Simulink']
     },
     {
       icon: <FaTools />,
       title: 'Tools & Technologies',
-      skills: ['Git', 'GitHub', 'VS Code', 'Figma', 'Adobe XD', 'Photoshop', 'Cisco Packet Tracer', 'Web Development', 'Computer Vision', 'Digital Design', 'Linux', 'Agile Methodology']
+      skills: ['Git', 'GitHub', 'VS Code','Cisco Packet Tracer', 'Web Development', 'Digital Design', 'Linux','Postman']
     }
   ];
 

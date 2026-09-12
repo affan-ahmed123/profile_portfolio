@@ -49,16 +49,12 @@ const About = () => {
             </p>
             <div className="about-stats">
               <div className="stat">
-                <h3>2024</h3>
+                <h3>2026</h3>
                 <p>BS Graduate</p>
               </div>
               <div className="stat">
                 <h3>10+</h3>
                 <p>Projects Completed</p>
-              </div>
-              <div className="stat">
-                <h3>5+</h3>
-                <p>Technologies Mastered</p>
               </div>
             </div>
           </div>

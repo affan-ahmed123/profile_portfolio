@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [status, setStatus] = useState(''); // 'sending' | 'success' | 'error'
 
   const handleChange = (e) => {
     setFormData({
@@ -19,20 +21,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const mailtoLink = `mailto:affanahmed@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    
-    window.location.href = mailtoLink;
-    
-    alert('Opening your email client... Thank you for reaching out!');
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+    setStatus('sending');
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: 'affannadeem08@gmail.com'
+    };
+
+    emailjs.send(
+      'service_6invofh',       // EmailJS Service ID
+      'template_ql7el9f',      // EmailJS Template ID
+      templateParams,
+      'FTBgEmG1JYHdbgAJA'      // EmailJS Public Key
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setStatus(''), 5000);
+    })
+    .catch((error) => {
+      console.error('FAILED...', error);
+      setStatus('error');
+      setTimeout(() => setStatus(''), 5000);
     });
   };
 
@@ -53,14 +67,14 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div className="contact-item-content">
                   <h3>Email</h3>
-                  <p><a href="mailto:affanahmed@gmail.com">affanahmed@gmail.com</a></p>
+                  <p><a href="mailto:affannadeem08@gmail.com">affannadeem08@gmail.com</a></p>
                 </div>
               </div>
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
                 <div className="contact-item-content">
                   <h3>Phone</h3>
-                  <p><a href="tel:+923032781433">+92 303 2781433</a></p>
+                  <p><a href="tel:03432172162">03432172162</a></p>
                 </div>
               </div>
               <div className="contact-item">
@@ -74,10 +88,10 @@ const Contact = () => {
             <div className="contact-social">
               <h3>Connect With Me</h3>
               <div className="social-links">
-                <a href="https://www.linkedin.com/in/affan-ahmed" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://www.linkedin.com/in/affan-ahmed-14898625a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXg9x9LGaTCKLcdErN2lXNw%3D%3D" target="_blank" rel="noopener noreferrer" className="social-link">
                   <FaLinkedin /> LinkedIn
                 </a>
-                <a href="https://github.com/umai90" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://github.com/affan-ahmed123" target="_blank" rel="noopener noreferrer" className="social-link">
                   <FaGithub /> GitHub
                 </a>
               </div>
@@ -134,9 +148,23 @@ const Contact = () => {
                 rows="6"
               />
             </div>
-            <button type="submit" className="submit-btn">
-              <FaEnvelope /> Send Message
+            <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+              {status === 'sending' ? (
+                <><span className="spinner"></span> Sending...</>
+              ) : (
+                <><FaPaperPlane /> Send Message</>
+              )}
             </button>
+            {status === 'success' && (
+              <div className="form-status success">
+                ✅ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="form-status error">
+                ❌ Something went wrong. Please try again or email directly.
+              </div>
+            )}
           </form>
         </div>
       </div>
