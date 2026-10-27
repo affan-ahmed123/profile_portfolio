@@ -7,7 +7,7 @@ const Skills = () => {
     {
       icon: <FaReact />,
       title: 'Frontend & Mobile Development',
-      skills: ['React.js', 'Flutter', 'Dart', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'jQuery', 'Responsive Design']
+      skills: ['Next.js', 'React.js', 'Flutter', 'Dart', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'jQuery', 'Responsive Design']
     },
     {
       icon: <FaNode />,

@@ -1,9 +1,18 @@
 import React from 'react';
 import './Projects.css';
-import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones, FaTasks } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Projexa - Project Management Tool',
+      description: 'A collaborative full-stack project management platform featuring interactive Kanban boards, Gantt charts, and dynamic project timelines. Built with real-time WebSocket communication, scalable REST APIs, and a modern responsive interface.',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB Atlas', 'WebSockets', 'REST APIs'],
+      github: null,
+      live: 'https://projexa-workspace.vercel.app/',
+      icon: <FaTasks />,
+      featured: true
+    },
     {
       title: 'Smart Headphone: Real-Time Translation & Deepfake Detection (FYP)',
       description: 'A wearable headphone system performing real-time multilingual speech translation (34 languages) and AI-generated deepfake voice detection. Features online/offline modes, 1-way & 2-way translation, voice recording with cloud backup, and ML-based deepfake detection using 9-model ensemble trained on ASVspoof 2019 dataset.',

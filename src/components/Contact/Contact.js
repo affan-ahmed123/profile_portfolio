@@ -28,7 +28,7 @@ const Contact = () => {
       from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
-      to_email: 'affannadeem08@gmail.com'
+      to_email: 'affan.codes01@gmail.com'
     };
 
     emailjs.send(
@@ -67,7 +67,7 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div className="contact-item-content">
                   <h3>Email</h3>
-                  <p><a href="mailto:affannadeem08@gmail.com">affannadeem08@gmail.com</a></p>
+                  <p><a href="mailto:affan.codes01@gmail.com">affan.codes01@gmail.com</a></p>
                 </div>
               </div>
               <div className="contact-item">

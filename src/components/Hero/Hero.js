@@ -76,7 +76,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/affan-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-            <a href="mailto:affanahmed08@gmail.com" aria-label="Email">
+            <a href="mailto:affan.codes01@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
             <a href="tel:03432172162" aria-label="Phone">
@@ -90,15 +90,7 @@ const Hero = () => {
               src="/images/hello.png" 
               alt="Affan Ahmed - Computer Engineer" 
               className="profile-image"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
             />
-            <div className="image-placeholder" style={{display: 'none'}}>
-              <span className="placeholder-text">AA</span>
-            </div>
-            <div className="image-glow"></div>
           </div>
         </div>
       </div>

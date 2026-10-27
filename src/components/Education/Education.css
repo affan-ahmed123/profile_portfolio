@@ -1,8 +1,9 @@
 .education {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  background: var(--bg-primary);
   position: relative;
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .education::before {
@@ -13,8 +14,8 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 30% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(0, 153, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 30% 20%, rgba(2, 132, 199, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -25,24 +26,13 @@
   z-index: 1;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .education-section {
   margin-bottom: 60px;
 }
 
 .subsection-title {
   font-size: 2rem;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 30px;
   font-weight: 600;
   text-align: center;
@@ -60,7 +50,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: rgba(0, 212, 255, 0.3);
+  background: var(--timeline-line);
 }
 
 .education-item {
@@ -82,43 +72,44 @@
 .education-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
   color: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(2, 132, 199, 0.3);
   flex-shrink: 0;
 }
 
 .education-content {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   padding: 25px;
   border-radius: 15px;
   flex: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .education-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: var(--bg-card-hover);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-hover);
 }
 
 .education-degree {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 8px;
   font-weight: 700;
 }
 
 .education-institution {
   font-size: 1.1rem;
-  color: #00d4ff;
+  color: var(--accent-cyan);
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -133,18 +124,18 @@
 }
 
 .education-location {
-  color: #b0b0b0;
+  color: var(--text-muted);
   font-size: 0.95rem;
   font-style: italic;
 }
 
 .education-period {
-  color: #00d4ff;
+  color: var(--badge-color);
   font-size: 0.95rem;
   font-weight: 600;
   padding: 4px 12px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
   border-radius: 20px;
 }
 
@@ -157,7 +148,7 @@
 .education-details li {
   padding-left: 25px;
   margin-bottom: 10px;
-  color: #b0b0b0;
+  color: var(--text-secondary);
   line-height: 1.6;
   position: relative;
 }
@@ -166,7 +157,7 @@
   content: '▹';
   position: absolute;
   left: 0;
-  color: #00d4ff;
+  color: var(--accent-cyan);
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -188,25 +179,26 @@
 }
 
 .certification-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: center;
 }
 
 .certification-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: var(--bg-card-hover);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-hover);
 }
 
 .certification-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -214,25 +206,25 @@
   font-size: 1.8rem;
   color: #ffffff;
   margin: 0 auto 20px;
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(2, 132, 199, 0.3);
 }
 
 .certification-title {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 8px;
   font-weight: 700;
 }
 
 .certification-issuer {
   font-size: 1rem;
-  color: #00d4ff;
+  color: var(--accent-cyan);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .certification-description {
-  color: #b0b0b0;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
 }
@@ -251,24 +243,25 @@
 }
 
 .language-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .language-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: var(--bg-card-hover);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-hover);
 }
 
 .language-name {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: var(--text-primary);
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -276,8 +269,8 @@
 .language-level {
   display: inline-block;
   padding: 6px 16px;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-  color: #0a0a0a;
+  background: var(--accent-gradient);
+  color: #ffffff;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -286,10 +279,6 @@
 @media (max-width: 768px) {
   .education {
     padding: 60px 15px;
-  }
-
-  .section-title {
-    font-size: 2rem;
   }
 
   .subsection-title {

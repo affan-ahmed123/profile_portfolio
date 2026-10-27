@@ -9,9 +9,11 @@
 }
 
 .navbar-scrolled {
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.1);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-container {
@@ -31,14 +33,14 @@
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .logo-dot {
-  color: #00d4ff;
+  color: var(--accent-cyan);
   font-size: 2.5rem;
   margin-left: -5px;
 }
@@ -54,6 +56,7 @@
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  color: var(--text-primary);
   transition: color 0.3s ease;
 }
 
@@ -64,12 +67,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   transition: width 0.3s ease;
 }
 
 .navbar-menu li:hover {
-  color: #00d4ff;
+  color: var(--accent-cyan);
 }
 
 .navbar-menu li:hover::after {
@@ -79,13 +82,13 @@
 .navbar-toggle {
   display: none;
   font-size: 1.8rem;
-  color: #00d4ff;
+  color: var(--accent-cyan);
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1.5rem 5%;
+    padding: 1.2rem 5%;
   }
 
   .navbar-toggle {
@@ -96,15 +99,17 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
+    width: 75%;
     height: 100vh;
-    background: rgba(10, 10, 10, 0.98);
-    backdrop-filter: blur(10px);
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     flex-direction: column;
     padding: 5rem 2rem;
     gap: 2rem;
     transition: right 0.3s ease;
-    box-shadow: -4px 0 30px rgba(0, 212, 255, 0.1);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid var(--border-color);
   }
 
   .navbar-menu.active {
@@ -113,5 +118,6 @@
 
   .navbar-menu li {
     font-size: 1.2rem;
+    color: var(--text-primary);
   }
 }

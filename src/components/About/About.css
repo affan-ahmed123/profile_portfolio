@@ -1,6 +1,7 @@
 .about {
-  background: #0f0f0f;
+  background: var(--bg-secondary);
   position: relative;
+  transition: background 0.3s ease;
 }
 
 .about-container {
@@ -34,11 +35,11 @@
   font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .highlight {
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -48,7 +49,7 @@
 .about-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #b0b0b0;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -62,22 +63,24 @@
 .stat {
   text-align: center;
   padding: 1.5rem;
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 
 .stat:hover {
-  background: rgba(0, 212, 255, 0.1);
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .stat h3 {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -86,7 +89,7 @@
 
 .stat p {
   font-size: 0.9rem;
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .about-cards {
@@ -96,10 +99,11 @@
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 2rem;
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
   animation: fadeInUp 1s ease-out;
   animation-fill-mode: both;
@@ -111,15 +115,15 @@
 .about-card:nth-child(4) { animation-delay: 0.4s; }
 
 .about-card:hover {
-  background: rgba(0, 212, 255, 0.05);
-  border-color: rgba(0, 212, 255, 0.3);
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .card-icon {
   font-size: 3rem;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -130,13 +134,13 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .card-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 1024px) {
