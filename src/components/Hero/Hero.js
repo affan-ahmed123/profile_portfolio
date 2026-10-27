@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
+const roles = ['Computer Engineer', 'Full Stack Developer'];
+
 const Hero = () => {
   const [text, setText] = useState('');
-  const roles = ['Computer Engineer', 'Full Stack Developer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
