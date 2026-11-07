@@ -9,6 +9,7 @@ import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import DotBackground from './components/DotBackground/DotBackground';
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <DotBackground />
       <Navbar />
       <Hero />
       <About />

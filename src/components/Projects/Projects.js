@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Projects.css';
 import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones, FaTasks } from 'react-icons/fa';
 
@@ -11,6 +12,7 @@ const Projects = () => {
       github: null,
       live: 'https://projexa-workspace.vercel.app/',
       icon: <FaTasks />,
+      image: '/images/projects/projexa.png',
       featured: true
     },
     {
@@ -20,15 +22,17 @@ const Projects = () => {
       github: 'https://github.com/affan-ahmed123/fyp_project-smart_headphone-',
       live: null,
       icon: <FaHeadphones />,
+      image: '/images/projects/smartheadphone.png',
       featured: true
     },
     {
-      title: 'Fit With AH - Gym Management System',
+      title: 'Gym Portfolio',
       description: 'A comprehensive gym management website featuring membership plans, trainer booking, workout tracking, and nutrition guidance. Built with modern web technologies for seamless user experience.',
       tech: ['React.js', 'JavaScript', 'CSS3', 'Responsive Design'],
       github: null,
       live: 'https://fit-with-ah.netlify.app/',
       icon: <FaDumbbell />,
+      image: '/images/projects/gymportfolio.png',
       featured: true
     },
     {
@@ -56,14 +60,6 @@ const Projects = () => {
       featured: false
     },
     {
-      title: 'GYM Portfolio Website',
-      description: 'A responsive gem website where the content is pulled dynamically from Firebase. Features modern design with real-time data updates and elegant UI.',
-      tech: ['HTML5', 'CSS3', 'JavaScript', 'Firebase'],
-      github: null,
-      live: null,
-      featured: false
-    },
-    {
       title: 'Floating Point Calculator',
       description: 'A Python app that performs floating-point calculations. Handles complex mathematical operations with precision and user-friendly interface.',
       tech: ['verilog', 'TestBench', 'Mathematical Computing'],
@@ -81,49 +77,171 @@ const Projects = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const featuredVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: 'easeOut' }
+    }
+  };
+
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.5, ease: 'easeOut' }
+    }
+  };
+
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <h2 className="section-title">Featured Projects</h2>
-        <p className="projects-subtitle">Showcasing my work in web development, IoT systems, and innovative solutions</p>
-        
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+        >
+          Featured Projects
+        </motion.h2>
+        <motion.p
+          className="projects-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Showcasing my work in web development, IoT systems, and innovative solutions
+        </motion.p>
+
         {/* Featured Projects */}
-        <div className="featured-projects">
+        <motion.div
+          className="featured-projects"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {projects.filter(p => p.featured).map((project, index) => (
-            <div className="featured-project-card" key={index}>
-              <div className="featured-project-icon">
-                {project.icon}
+            <motion.div
+              className="featured-project-card"
+              key={index}
+              variants={featuredVariants}
+              whileHover={{ y: -8 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              {/* Background Image Preview */}
+              <div className="featured-project-image">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="featured-image"
+                />
+                <div className="featured-image-overlay">
+                  <motion.div
+                    className="featured-project-icon"
+                    whileHover={{ rotate: 15, scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    {project.icon}
+                  </motion.div>
+                </div>
               </div>
+
+              {/* Content */}
               <div className="featured-project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.tech.map((tech, techIndex) => (
-                    <span className="tech-tag" key={techIndex}>{tech}</span>
+                    <motion.span
+                      className="tech-tag"
+                      key={techIndex}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: techIndex * 0.05 }}
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      {tech}
+                    </motion.span>
                   ))}
                 </div>
                 <div className="project-links">
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <FaGithub /> View Code
-                    </a>
+                    </motion.a>
                   )}
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link live-demo-link"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <FaExternalLinkAlt /> Live Demo
-                    </a>
+                    </motion.a>
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Other Projects */}
-        <h3 className="section-subtitle">Other Projects</h3>
-        <div className="projects-grid">
+        <motion.h3
+          className="section-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Other Projects
+        </motion.h3>
+        <motion.div
+          className="projects-grid"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {projects.filter(p => !p.featured).map((project, index) => (
-            <div className="project-card" key={index}>
+            <motion.div
+              className="project-card"
+              key={index}
+              variants={cardVariants}
+              whileHover={{ y: -6, boxShadow: '0 12px 32px rgba(0,0,0,0.1)' }}
+            >
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -133,9 +251,9 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

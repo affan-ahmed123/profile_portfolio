@@ -1,31 +1,63 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Footer.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="footer-content">
-        <div className="footer-logo">
+        <motion.div
+          className="footer-logo"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="logo-text">Affan</span>
           <span className="logo-dot">.</span>
-        </div>
-        <div className="footer-social">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="mailto:affan.codes01@gmail.com">
-            <FaEnvelope />
-          </a>
-        </div>
-        <p className="footer-text">
+        </motion.div>
+        <motion.div
+          className="footer-social"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {[
+            { href: "https://github.com", icon: <FaGithub /> },
+            { href: "https://linkedin.com", icon: <FaLinkedin /> },
+            { href: "mailto:affan.codes01@gmail.com", icon: <FaEnvelope /> },
+          ].map((social, i) => (
+            <motion.a
+              key={i}
+              href={social.href}
+              target={social.href.startsWith('http') ? "_blank" : undefined}
+              rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
+              whileHover={{ scale: 1.2, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </motion.div>
+        <motion.p
+          className="footer-text"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           © 2026 Affan Ahmed. Made with <FaHeart className="footer-heart" /> and React
-        </p>
+        </motion.p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

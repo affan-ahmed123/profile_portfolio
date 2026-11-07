@@ -1,9 +1,11 @@
 .App {
   width: 100%;
   min-height: 100vh;
-  background: var(--bg-primary);
+  background: transparent;
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 /* Common Section Styles */
@@ -60,3 +62,19 @@ section {
     font-size: 1.8rem;
   }
 }
+
+/* Glassmorphism card enhancement for animated background */
+.about-card,
+.skill-card,
+.project-card,
+.featured-project-card,
+.education-item,
+.certification-card,
+.language-item,
+.experience-card,
+.contact-card,
+.contact-form-container {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+

@@ -25,24 +25,19 @@
 }
 
 .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 
-.logo-text {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.logo-dot {
-  color: var(--accent-cyan);
-  font-size: 2.5rem;
-  margin-left: -5px;
+.logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+  mix-blend-mode: multiply;
+  display: block;
 }
 
 .navbar-menu {

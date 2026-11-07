@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Experience.css';
 import { FaBriefcase, FaLaptopCode } from 'react-icons/fa';
 
@@ -34,18 +35,66 @@ const Experience = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.25 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: 'easeOut' }
+    }
+  };
+
   return (
     <section className="experience" id="experience">
       <div className="experience-container">
-        <h2 className="section-title">Experience</h2>
-        <p className="experience-subtitle">Professional and academic work experience</p>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+        >
+          Experience
+        </motion.h2>
+        <motion.p
+          className="experience-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Professional and academic work experience
+        </motion.p>
         
-        <div className="experience-timeline">
+        <motion.div
+          className="experience-timeline"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {experiences.map((exp, index) => (
-            <div className="experience-item" key={index}>
-              <div className="experience-icon-wrapper">
+            <motion.div
+              className="experience-item"
+              key={index}
+              variants={itemVariants}
+              whileHover={{ x: 8 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <motion.div
+                className="experience-icon-wrapper"
+                whileHover={{ scale: 1.15 }}
+              >
                 <div className="experience-icon">{exp.icon}</div>
-              </div>
+              </motion.div>
               <div className="experience-content">
                 <div className="experience-header">
                   <div>
@@ -60,13 +109,21 @@ const Experience = () => {
                 <p className="experience-location">{exp.location}</p>
                 <ul className="experience-responsibilities">
                   {exp.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, x: -15 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.3 + idx * 0.1 }}
+                    >
+                      {responsibility}
+                    </motion.li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
