@@ -72,22 +72,45 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 2.5rem 5%;
+    padding: 2.2rem 5%;
   }
 
   .footer-logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .footer-social {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .footer-social a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .footer-text {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 16px;
+  }
+
+  .footer-content {
+    gap: 1.4rem;
+  }
+
+  .footer-social {
+    gap: 1rem;
+  }
+
+  .footer-social a {
+    font-size: 1.3rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
   }
 }

@@ -79,32 +79,56 @@
   font-size: 1.8rem;
   color: var(--accent-cyan);
   cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  padding: 4px;
+}
+
+/* Mobile Backdrop */
+.navbar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1.2rem 5%;
+    padding: 0.9rem 5%;
+  }
+
+  .logo-img {
+    height: 38px;
   }
 
   .navbar-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
+    width: min(80vw, 320px);
     height: 100vh;
     background: var(--nav-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 5rem 2rem;
-    gap: 2rem;
-    transition: right 0.3s ease;
-    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
+    padding: 6rem 2rem 2.5rem;
+    gap: 1.8rem;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 35px rgba(0, 0, 0, 0.18);
     border-left: 1px solid var(--border-color);
+    z-index: 1000;
+    overflow-y: auto;
   }
 
   .navbar-menu.active {
@@ -112,7 +136,19 @@
   }
 
   .navbar-menu li {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
     color: var(--text-primary);
+    padding: 0.4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 16px;
+  }
+
+  .logo-img {
+    height: 34px;
   }
 }

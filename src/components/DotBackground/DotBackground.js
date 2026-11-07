@@ -178,9 +178,26 @@ const DotBackground = () => {
       });
     };
 
+    const onTouchMove = (e) => {
+      if (e.touches && e.touches[0]) {
+        mouse.x = e.touches[0].clientX;
+        mouse.y = e.touches[0].clientY;
+        mouse.active = true;
+      }
+    };
+
+    const onTouchEnd = () => {
+      mouse.active = false;
+      mouse.x = null;
+      mouse.y = null;
+    };
+
     window.addEventListener('mousemove', onMouseMove, { passive: true });
     window.addEventListener('mouseleave', onMouseLeave, { passive: true });
     window.addEventListener('click', onClick, { passive: true });
+    window.addEventListener('touchstart', onTouchMove, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
+    window.addEventListener('touchend', onTouchEnd, { passive: true });
 
     const handleResize = () => {
       resize();
@@ -298,6 +315,9 @@ const DotBackground = () => {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseleave', onMouseLeave);
       window.removeEventListener('click', onClick);
+      window.removeEventListener('touchstart', onTouchMove);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchend', onTouchEnd);
       window.removeEventListener('resize', handleResize);
       document.removeEventListener('visibilitychange', handleVisibility);
     };

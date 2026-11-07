@@ -277,30 +277,28 @@
 }
 
 @media (max-width: 768px) {
-  .education {
-    padding: 60px 15px;
-  }
-
   .subsection-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 
   .education-timeline::before {
-    left: 20px;
+    left: 22.5px;
   }
 
   .education-item {
-    gap: 20px;
+    gap: 18px;
+    margin-bottom: 25px;
   }
 
   .education-icon {
     width: 45px;
     height: 45px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .education-content {
-    padding: 20px;
+    padding: 18px 16px;
   }
 
   .education-degree {
@@ -308,11 +306,63 @@
   }
 
   .education-institution {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .education-meta {
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
   }
 
   .certifications-grid {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-timeline::before {
+    left: 18px;
+    width: 2px;
+  }
+
+  .education-item {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .education-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  .education-content {
+    padding: 14px 12px;
+  }
+
+  .education-degree {
+    font-size: 1.05rem;
+  }
+
+  .education-institution {
+    font-size: 0.88rem;
+  }
+
+  .education-details li {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+
+  .certification-card {
+    padding: 1.4rem 1.1rem;
   }
 
   .languages-grid {
