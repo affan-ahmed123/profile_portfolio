@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Projects.css';
-import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones, FaTasks } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones, FaTasks, FaUtensils, FaCar } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
@@ -27,12 +27,32 @@ const Projects = () => {
     },
     {
       title: 'Gym Portfolio',
-      description: 'A comprehensive gym management website featuring membership plans, trainer booking, workout tracking, and nutrition guidance. Built with modern web technologies for seamless user experience.',
+      description: 'A comprehensive personal fitness & gym portfolio website featuring bespoke training programs, trainer booking, workout tracking, and nutrition guidance. Built with modern web technologies for seamless user experience.',
       tech: ['React.js', 'JavaScript', 'CSS3', 'Responsive Design'],
       github: null,
-      live: 'https://fit-with-ah.netlify.app/',
+      live: 'https://fit-with-ahsan.vercel.app/',
       icon: <FaDumbbell />,
-      image: '/images/projects/gymportfolio.png',
+      image: '/images/projects/fitwithahsan.png',
+      featured: true
+    },
+    {
+      title: 'Madina Pakwan Center',
+      description: 'A responsive full-featured food ordering and catering platform for Madina Pakwan Center. Features dynamic menu browsing, cart management, instant checkout, and direct WhatsApp ordering for traditional Karachi dum biryani and catering packages.',
+      tech: ['Next.js', 'React.js', 'Tailwind CSS', 'JavaScript', 'Responsive UI'],
+      github: null,
+      live: 'https://madinapakwancentre.vercel.app/',
+      icon: <FaUtensils />,
+      image: '/images/projects/madinapakwan.png',
+      featured: true
+    },
+    {
+      title: 'Auto Parts Dynamic System',
+      description: 'A dynamic automotive spare parts e-commerce and catalog platform. Features multi-level vehicle filtering (Make, Model, Year), categorized replacement components, product search, shopping cart, and customer authentication.',
+      tech: ['React.js', 'Tailwind CSS', 'TypeScript', 'REST APIs', 'State Management'],
+      github: null,
+      live: 'https://auto-parts-dynamic-system.vercel.app/',
+      icon: <FaCar />,
+      image: '/images/projects/autoparts.png',
       featured: true
     },
     {
