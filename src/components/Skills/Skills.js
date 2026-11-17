@@ -13,7 +13,7 @@ const Skills = () => {
     {
       icon: <FaNode />,
       title: 'Backend & Database',
-      skills: ['Node.js', 'Express.js', 'Python', 'Flask', 'Java', 'C++', 'PHP', 'MongoDB', 'PostgreSQL', 'MySQL', 'REST APIs','GraphQL','Sockets','Prisma', 'Firebase']
+      skills: ['Node.js', 'Express.js', 'Python', 'Flask', 'Java', 'C++', 'PHP', 'MongoDB', 'PostgreSQL', 'MySQL', 'REST APIs', 'GraphQL', 'Sockets', 'Prisma', 'Firebase']
     },
     {
       icon: <FaMicrochip />,
@@ -23,7 +23,7 @@ const Skills = () => {
     {
       icon: <FaTools />,
       title: 'Tools & Technologies',
-      skills: ['Git', 'GitHub', 'VS Code','Cisco Packet Tracer', 'Web Development', 'Digital Design', 'Linux','Postman']
+      skills: ['Git', 'GitHub', 'VS Code', 'Cisco Packet Tracer', 'Web Development', 'Digital Design', 'Linux', 'Postman']
     }
   ];
 
@@ -60,7 +60,7 @@ const Skills = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           Technical Skills
@@ -69,7 +69,7 @@ const Skills = () => {
           className="skills-subtitle"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Technologies and tools I work with to build amazing solutions
@@ -79,7 +79,7 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {skillCategories.map((category, index) => (
             <motion.div
@@ -103,7 +103,7 @@ const Skills = () => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 {category.skills.map((skill, skillIndex) => (
                   <motion.span

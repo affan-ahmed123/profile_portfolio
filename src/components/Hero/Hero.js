@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './Hero.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
-const roles = ['Computer Engineer', 'Full Stack Developer'];
+const roles = ['Computer Engineer', 'Full Stack Developer', 'MERN & AI Developer'];
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -13,7 +13,7 @@ const Hero = () => {
 
   useEffect(() => {
     const currentRole = roles[roleIndex];
-    
+
     if (!isDeleting && index < currentRole.length) {
       setTimeout(() => {
         setText(currentRole.substring(0, index + 1));
@@ -52,30 +52,34 @@ const Hero = () => {
         <motion.div
           className="hero-text"
           initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <motion.p
             className="hero-greeting"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
             Hello, I'm
           </motion.p>
           <motion.h1
             className="hero-name"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             Affan <span className="gradient-text">Ahmed</span>
           </motion.h1>
           <motion.h2
             className="hero-title"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.45 }}
           >
             <span className="typing-text">{text}</span>
             <span className="cursor">|</span>
@@ -83,18 +87,20 @@ const Hero = () => {
           <motion.p
             className="hero-description"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             BS Computer Engineering graduate from Sir Syed University of Engineering & Technology.
-            Passionate about building innovative web applications, IoT systems, and creating 
+            Passionate about building innovative web applications, IoT systems, and creating
             seamless digital experiences with modern technologies.
           </motion.p>
           <motion.div
             className="hero-buttons"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.75 }}
           >
             <motion.button
               className="btn btn-primary"
@@ -116,8 +122,9 @@ const Hero = () => {
           <motion.div
             className="hero-social"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             {[
               { href: "https://github.com/affan-ahmed123", icon: <FaGithub />, label: "GitHub" },
@@ -142,13 +149,14 @@ const Hero = () => {
         <motion.div
           className="hero-image"
           initial={{ opacity: 0, x: 60, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
         >
           <div className="image-wrapper">
-            <img 
-              src="/images/hello.png" 
-              alt="Affan Ahmed - Computer Engineer" 
+            <img
+              src="/images/hello.png"
+              alt="Affan Ahmed - Computer Engineer"
               className="profile-image"
             />
           </div>

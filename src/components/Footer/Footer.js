@@ -9,7 +9,7 @@ const Footer = () => {
       className="footer"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.6 }}
     >
       <div className="footer-content">
@@ -17,7 +17,7 @@ const Footer = () => {
           className="footer-logo"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5 }}
         >
           <span className="logo-text">Affan</span>
@@ -27,12 +27,12 @@ const Footer = () => {
           className="footer-social"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.5, delay: 0.15 }}
         >
           {[
-            { href: "https://github.com", icon: <FaGithub /> },
-            { href: "https://linkedin.com", icon: <FaLinkedin /> },
+            { href: "https://github.com/affan-ahmed123", icon: <FaGithub /> },
+            { href: "https://www.linkedin.com/in/affan-ahmed-14898625a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXg9x9LGaTCKLcdErN2lXNw%3D%3D", icon: <FaLinkedin /> },
             { href: "mailto:affan.codes01@gmail.com", icon: <FaEnvelope /> },
           ].map((social, i) => (
             <motion.a
@@ -51,8 +51,8 @@ const Footer = () => {
           className="footer-text"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           © 2026 Affan Ahmed. Made with <FaHeart className="footer-heart" /> and React
         </motion.p>

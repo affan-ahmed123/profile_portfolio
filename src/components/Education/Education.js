@@ -97,7 +97,7 @@ const Education = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           Education & Certifications
@@ -109,7 +109,7 @@ const Education = () => {
             className="subsection-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
             Education
@@ -119,7 +119,7 @@ const Education = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
           >
             {education.map((edu, index) => (
               <motion.div
@@ -148,8 +148,8 @@ const Education = () => {
                         key={idx}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1 }}
+                        viewport={{ once: false }}
+                        transition={{ delay: idx * 0.08 }}
                       >
                         {detail}
                       </motion.li>
@@ -167,7 +167,7 @@ const Education = () => {
             className="subsection-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
             Certifications
@@ -177,7 +177,7 @@ const Education = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.15 }}
           >
             {certifications.map((cert, index) => (
               <motion.div
@@ -206,7 +206,7 @@ const Education = () => {
             className="subsection-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
             Languages
@@ -215,8 +215,8 @@ const Education = () => {
             className="languages-grid"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <motion.div
               className="language-item"

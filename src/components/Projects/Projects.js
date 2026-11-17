@@ -139,7 +139,7 @@ const Projects = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           Featured Projects
@@ -148,7 +148,7 @@ const Projects = () => {
           className="projects-subtitle"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Showcasing my work in web development, IoT systems, and innovative solutions
@@ -160,7 +160,7 @@ const Projects = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {projects.filter(p => p.featured).map((project, index) => (
             <motion.div
@@ -199,8 +199,8 @@ const Projects = () => {
                       key={techIndex}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: techIndex * 0.05 }}
+                      viewport={{ once: false }}
+                      transition={{ delay: techIndex * 0.04 }}
                       whileHover={{ scale: 1.1 }}
                     >
                       {tech}
@@ -243,7 +243,7 @@ const Projects = () => {
           className="section-subtitle"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
           Other Projects
@@ -253,7 +253,7 @@ const Projects = () => {
           variants={gridVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {projects.filter(p => !p.featured).map((project, index) => (
             <motion.div

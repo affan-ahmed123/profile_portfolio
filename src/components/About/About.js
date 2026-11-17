@@ -51,7 +51,7 @@ const About = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           About Me
@@ -61,7 +61,7 @@ const About = () => {
             className="about-text"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="about-intro">
@@ -83,8 +83,8 @@ const About = () => {
               className="about-stats"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <motion.div
                 className="stat"
@@ -107,7 +107,7 @@ const About = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.15 }}
           >
             {cards.map((card, index) => (
               <motion.div

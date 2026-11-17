@@ -81,7 +81,7 @@ const Contact = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           Get In Touch
@@ -90,7 +90,7 @@ const Contact = () => {
           className="contact-subtitle"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Have a project in mind? Let's work together!
@@ -100,7 +100,7 @@ const Contact = () => {
             className="contact-info"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="contact-text">
@@ -113,7 +113,7 @@ const Contact = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               {contactItems.map((item, index) => (
                 <motion.div
@@ -135,8 +135,8 @@ const Contact = () => {
               className="contact-social"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <h3>Connect With Me</h3>
               <div className="social-links">
@@ -168,7 +168,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <div className="form-row">

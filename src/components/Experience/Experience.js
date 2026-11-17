@@ -6,16 +6,16 @@ import { FaBriefcase, FaLaptopCode } from 'react-icons/fa';
 const Experience = () => {
   const experiences = [
     {
-      title: 'MERN Stack Intern',
+      title: 'MERN X AI Intern',
       company: 'Coderatory Revolution & Innovation',
       location: 'Karachi, Pakistan',
       period: '3 months (2026)',
       type: 'Internship',
       icon: <FaBriefcase />,
       responsibilities: [
-        'Developed and maintained web applications using Type Script, Next JS , MongoDB, Express.js, React.js, and Node.js',
+        'Developed and maintained web applications using TypeScript, Next.js, MongoDB, Express.js, React.js, and Node.js with AI features',
         'Collaborated with senior developers on client projects',
-        'Implemented responsive UI components and RESTful APIs , GraphQL , Sockets, prisma',
+        'Implemented responsive UI components and RESTful APIs, GraphQL, WebSockets, Prisma',
         'Participated in code reviews and agile development practices'
       ]
     },
@@ -59,7 +59,7 @@ const Experience = () => {
           className="section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           Experience
@@ -68,18 +68,18 @@ const Experience = () => {
           className="experience-subtitle"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Professional and academic work experience
         </motion.p>
-        
+
         <motion.div
           className="experience-timeline"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {experiences.map((exp, index) => (
             <motion.div
@@ -113,8 +113,8 @@ const Experience = () => {
                       key={idx}
                       initial={{ opacity: 0, x: -15 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + idx * 0.1 }}
+                      viewport={{ once: false }}
+                      transition={{ delay: 0.1 + idx * 0.08 }}
                     >
                       {responsibility}
                     </motion.li>
