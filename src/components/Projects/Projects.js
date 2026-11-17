@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Projects.css';
-import { FaGithub, FaExternalLinkAlt, FaDumbbell, FaHeadphones, FaTasks, FaUtensils, FaCar } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaHeadphones, FaTasks, FaUtensils, FaCar } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
@@ -23,16 +23,6 @@ const Projects = () => {
       live: null,
       icon: <FaHeadphones />,
       image: '/images/projects/smartheadphone.png',
-      featured: true
-    },
-    {
-      title: 'Gym Portfolio',
-      description: 'A comprehensive personal fitness & gym portfolio website featuring bespoke training programs, trainer booking, workout tracking, and nutrition guidance. Built with modern web technologies for seamless user experience.',
-      tech: ['React.js', 'JavaScript', 'CSS3', 'Responsive Design'],
-      github: null,
-      live: 'https://fit-with-ahsan.vercel.app/',
-      icon: <FaDumbbell />,
-      image: '/images/projects/fitwithahsan.png',
       featured: true
     },
     {
