@@ -45,6 +45,12 @@ const Education = () => {
 
   const certifications = [
     {
+      title: 'Artificial Intelligence',
+      issuer: 'NAVTTC',
+      description: 'Comprehensive certification in Artificial Intelligence covering Machine Learning, Deep Learning, Neural Networks, and Python-based model development',
+      link: 'https://www.google.com/search?q=navttc+artificial+intelligence'
+    },
+    {
       title: 'Web Development',
       issuer: 'Global Computer Institute',
       description: 'Comprehensive web development training covering HTML, CSS, JavaScript, and modern frameworks',
